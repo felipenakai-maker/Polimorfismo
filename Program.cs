@@ -1,23 +1,26 @@
 ﻿namespace Polimorfismo
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            Geometria geometria = new Geometria();
+            Gerente gerente = new Gerente();
+            gerente.Nome = "Carlos";
+            gerente.Salario = 8000;
 
-            double ladoQuadrado = 5;
-            double areaQuadrado = geometria.CalcularArea(ladoQuadrado);
-            Console.WriteLine($"Área do quadrado (lado {ladoQuadrado}): {areaQuadrado}");
+            Desenvolvedor desenvolvedor = new Desenvolvedor();
+            desenvolvedor.Nome = "Ana";
+            desenvolvedor.Salario = 6000;
 
-            double base_ = 4;
-            double altura = 6;
-            double areaRetangulo = geometria.CalcularArea(base_, altura);
-            Console.WriteLine($"Área do retângulo (base {base_}, altura {altura}): {areaRetangulo}");
+            Console.WriteLine($"Funcionário: {gerente.Nome}");
+            Console.WriteLine($"Salário: R$ {gerente.Salario:F2}");
+            Console.WriteLine($"Bônus Anual: R$ {gerente.CalcularBonusAnual():F2}");
 
-            double raio = 3;
-            double areaCirculo = geometria.CalcularArea(raio, true);
-            Console.WriteLine($"Área do círculo (raio {raio}): {areaCirculo}");
+            Console.WriteLine();
+
+            Console.WriteLine($"Funcionário: {desenvolvedor.Nome}");
+            Console.WriteLine($"Salário: R$ {desenvolvedor.Salario:F2}");
+            Console.WriteLine($"Bônus Anual: R$ {desenvolvedor.CalcularBonusAnual():F2}");
         }
     }
 }
