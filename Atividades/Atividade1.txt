@@ -1,0 +1,23 @@
+namespace Polimorfismo
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Geometria geometria = new Geometria();
+
+            double ladoQuadrado = 5;
+            double areaQuadrado = geometria.CalcularArea(ladoQuadrado);
+            Console.WriteLine($"Área do quadrado (lado {ladoQuadrado}): {areaQuadrado}");
+
+            double base_ = 4;
+            double altura = 6;
+            double areaRetangulo = geometria.CalcularArea(base_, altura);
+            Console.WriteLine($"Área do retângulo (base {base_}, altura {altura}): {areaRetangulo}");
+
+            double raio = 3;
+            double areaCirculo = geometria.CalcularArea(raio, true);
+            Console.WriteLine($"Área do círculo (raio {raio}): {areaCirculo}");
+        }
+    }
+}
